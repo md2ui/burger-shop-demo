@@ -1,0 +1,71 @@
+name: burger_shop
+description: "Burger Shop: the md2ui demo app"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_inappwebview: ^6.1.5
+  flutter_svg: ^2.3.2
+  http: ^1.6.0
+  shared_preferences: ^2.5.6
+  url_launcher: ^6.3.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.4
+
+flutter:
+  uses-material-design: true
+
+  # The native header, footer and sheets use the theme's faces: Plus Jakarta Sans for
+  # headings, names and prices, Inter for what is read.
+  fonts:
+    - family: Plus Jakarta Sans
+      fonts:
+        - asset: fonts/PlusJakartaSans-Medium.ttf
+          weight: 500
+        - asset: fonts/PlusJakartaSans-SemiBold.ttf
+          weight: 600
+        - asset: fonts/PlusJakartaSans-Bold.ttf
+          weight: 700
+        - asset: fonts/PlusJakartaSans-ExtraBold.ttf
+          weight: 800
+    - family: Inter
+      fonts:
+        - asset: fonts/Inter_18pt-Regular.ttf
+          weight: 400
+        - asset: fonts/Inter_18pt-Medium.ttf
+          weight: 500
+        - asset: fonts/Inter_18pt-SemiBold.ttf
+          weight: 600
+
+  assets:
+    - assets/brand/
+    - assets/icon/
+    # The md2ui page and its theme, written by tool/sync_md2ui.sh (asset folders are
+    # not recursive, so it lists every one between these markers).
+    # md2ui-assets:start
+    - assets/md2ui/
+    - assets/md2ui/assets/
+    - assets/md2ui/theme/
+    - assets/md2ui/theme/assets/
+    - assets/md2ui/theme/assets/fonts/
+    - assets/md2ui/theme/assets/icons/
+    # md2ui-assets:end
+
+# dart run flutter_launcher_icons (tool/make_icons.py draws the images first).
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/icon.png"
+  remove_alpha_ios: true
+  adaptive_icon_background: "#E69F35"
+  adaptive_icon_foreground: "assets/icon/icon-foreground.png"
+  adaptive_icon_monochrome: "assets/icon/icon-monochrome.png"

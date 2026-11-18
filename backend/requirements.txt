@@ -1,0 +1,14 @@
+anthropic==2.2.0
+fastapi==0.161.1
+uvicorn==0.54.0
+# uvicorn's --env-file reads backend/.env with it.
+python-dotenv==1.2.4
+httpx==0.28.1
+pytest==9.1.1
+pytest-asyncio==1.4.0
+# md2ui, the published pre-release: draws the includes and answers the taps (README,
+# "md2ui in the backend"). It needs Python 3.13+ and installs its renderer's dependencies
+# too (skia-python, glfw), of which the backend uses none.
+md2ui==0.1.0a1
+# Only for AGENT_RUNTIME=claude-code (dev): the agent on your Claude Code login.
+claude-agent-sdk==0.2.174

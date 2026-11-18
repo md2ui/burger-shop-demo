@@ -1,0 +1,55 @@
+{
+  "note": "The demo customer's order history. days_ago and the hour are relative to when the server starts; the shop builds each order's lines and totals from products.json.",
+  "orders": [
+    {
+      "id": "BS-1031",
+      "days_ago": 34,
+      "hour": "13:05",
+      "items": { "classic-smash": 1, "crispy-fries": 1, "cookie-shake": 1 },
+      "card": "Visa •••• 4242",
+      "rider": "Alex"
+    },
+    {
+      "id": "BS-1033",
+      "days_ago": 27,
+      "hour": "20:15",
+      "items": { "bacon-bbq": 2, "fries-dip": 1 },
+      "card": "Visa •••• 4242",
+      "rider": "Riley",
+      "cancelled": { "after_minutes": 1, "reason": "Ordered by mistake" }
+    },
+    {
+      "id": "BS-1035",
+      "days_ago": 20,
+      "hour": "19:40",
+      "items": { "classic-smash": 2, "crispy-fries": 2, "strawberry-shake": 1 },
+      "card": "Mastercard •••• 4444",
+      "rider": "Sam"
+    },
+    {
+      "id": "BS-1037",
+      "days_ago": 13,
+      "hour": "12:30",
+      "items": { "golden-sesame": 1, "crispy-fries": 1 },
+      "card": "Visa •••• 4242",
+      "rider": "Jordan"
+    },
+    {
+      "id": "BS-1039",
+      "days_ago": 8,
+      "hour": "21:10",
+      "items": { "smokehouse": 1, "classic-smash": 1, "cookie-shake": 2 },
+      "card": "Visa •••• 4242",
+      "rider": "Alex",
+      "cancelled": { "after_minutes": 2, "reason": "Changed my mind" }
+    },
+    {
+      "id": "BS-1040",
+      "days_ago": 3,
+      "hour": "19:55",
+      "items": { "classic-smash": 1, "bacon-bbq": 1, "crispy-fries": 1, "strawberry-shake": 1 },
+      "card": "Mastercard •••• 4444",
+      "rider": "Sam"
+    }
+  ]
+}

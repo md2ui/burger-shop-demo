@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#F2FCD9" />
+    <title>Burger Shop</title>
+    <link rel="icon" href="/logo-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <header class="top">
+      <a class="brand" href="/" aria-label="Burger Shop, home" data-home>
+        <img src="/logo.svg" alt="Burger Shop" width="246" height="40" />
+      </a>
+      <div class="status" role="status" aria-live="polite" data-status></div>
+      <button type="button" class="btn btn-ghost" data-orders>
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M19.5 3.5 18 2l-1.5 1.5L15 2l-1.5 1.5L12 2l-1.5 1.5L9 2 7.5 3.5 6 2 4.5 3.5 3 2v20l1.5-1.5L6 22l1.5-1.5L9 22l1.5-1.5L12 22l1.5-1.5L15 22l1.5-1.5L18 22l1.5-1.5L21 22V2zM19 19.1H5V4.9h14zM6 15h12v2H6zm0-4h12v2H6zm0-4h12v2H6z"/></svg>
+        My orders
+      </button>
+    </header>
+
+    <main class="viewport">
+      <md2ui-view id="view" aria-label="Burger Shop"></md2ui-view>
+      <div class="working" hidden data-working>
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <span>Cooking up your answer…</span>
+      </div>
+    </main>
+
+    <footer class="bottom">
+      <form class="ask" data-ask>
+        <input name="prompt" type="text" autocomplete="off" maxlength="4000"
+               placeholder="Ask for anything: “something spicy under $12”, “where is my order?”" aria-label="Ask the shop" />
+        <button type="submit" class="icon-btn" aria-label="Send">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M3.4 20.4 21 12 3.4 3.6 3.4 10l12.6 2-12.6 2z"/></svg>
+        </button>
+      </form>
+      <div class="bar">
+        <div class="totals">
+          <span class="total" data-total>$0.00</span>
+          <span class="count" data-count>0 items</span>
+        </div>
+        <div class="actions">
+          <button type="button" class="btn btn-secondary" data-view-cart>View cart</button>
+          <button type="button" class="btn btn-primary" data-checkout disabled>Checkout</button>
+        </div>
+      </div>
+    </footer>
+
+    <dialog class="pay" data-pay aria-labelledby="pay-title">
+      <form method="dialog" class="pay-card" data-pay-form novalidate>
+        <div class="pay-head">
+          <span class="test-mode">Test mode</span>
+          <button type="button" class="icon-btn close" data-pay-close aria-label="Close payment">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M18.3 5.7 12 12l6.3 6.3-1.4 1.4L10.6 13.4 4.3 19.7l-1.4-1.4L9.2 12 2.9 5.7l1.4-1.4 6.3 6.3 6.3-6.3z"/></svg>
+          </button>
+        </div>
+        <div class="pay-summary">
+          <span class="merchant"><img src="/logo-mark.svg" alt="" width="28" height="28" /> Pay Burger Shop</span>
+          <strong class="amount" id="pay-title" data-pay-amount>$0.00</strong>
+          <ul class="lines" data-pay-lines></ul>
+        </div>
+        <div class="pay-fields">
+          <label>Card number
+            <input name="card_number" inputmode="numeric" autocomplete="cc-number" placeholder="4242 4242 4242 4242" required />
+          </label>
+          <div class="row">
+            <label>Expiry <input name="expiry" inputmode="numeric" autocomplete="cc-exp" placeholder="MM / YY" required /></label>
+            <label>CVC <input name="cvc" inputmode="numeric" autocomplete="cc-csc" placeholder="123" maxlength="4" required /></label>
+          </div>
+          <label>Name on card <input name="name" autocomplete="cc-name" placeholder="Jane Doe" /></label>
+          <p class="error" role="alert" data-pay-error></p>
+          <button type="submit" class="btn btn-primary wide" data-pay-submit>Pay</button>
+          <p class="hint">Sandbox: <b>4242 4242 4242 4242</b> pays, <b>4000 0000 0000 0002</b> is declined. Any future expiry and CVC. No real money moves.</p>
+        </div>
+      </form>
+    </dialog>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

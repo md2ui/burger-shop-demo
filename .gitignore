@@ -1,0 +1,10 @@
+backend/.venv/
+backend/.pytest_cache/
+__pycache__/
+web/node_modules/
+web/dist/
+.DS_Store
+app/build/
+app/.dart_tool/
+app/ios/Pods/
+.env

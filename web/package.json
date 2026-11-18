@@ -1,0 +1,20 @@
+{
+  "name": "burger-shop-web",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@md2ui/dom": "0.1.0-alpha.1",
+    "@md2ui/wire": "0.1.0-alpha.1"
+  },
+  "devDependencies": {
+    "typescript": "6.0.3",
+    "vite": "8.3.2"
+  }
+}
